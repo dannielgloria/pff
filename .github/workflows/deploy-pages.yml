@@ -25,7 +25,7 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE_PATH: /pff/
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
+          VITE_API_URL: ${{ vars.VITE_API_URL || 'https://steelblue-ostrich-970174.hostingersite.com' }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
